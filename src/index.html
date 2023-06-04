@@ -17,27 +17,61 @@
 
     .login-container {
       max-width: 400px;
-      margin: 100px auto;
+      margin: 50px auto;
+      margin-bottom: 0px;
       padding: 20px;
-      border: 1px solid #ccc;
     }
 
     .login-container input[type="text"],
     .login-container input[type="password"] {
       width: 100%;
       padding: 10px;
-      margin-bottom: 10px;
+      margin-top: 10px;
+      margin-bottom: 30px;
       border: 1px solid #ccc;
     }
 
     .login-container button {
-      width: 100%;
-      padding: 10px;
+      width: 50%;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .signin-button {
       background-color: #00958E;
       color: #fff;
       border: none;
-      cursor: pointer;
+      padding: 10px;
     }
+    .signup-button {
+      color: black;
+      background-color: white;
+      border: 1px solid #00958E;
+      color: black;
+      padding: 10px;
+    }
+    .a-link{
+      width: 100%;
+      color: black;
+      display: flex;
+      justify-content: left;
+      height: 4vh;
+    }
+
+    .botton-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh; /* Adjust the height of the container as needed */
+    }
+
+    .signup-title {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3vh; /* Adjust the height of the container as needed */
+    }
+
   </style>
 
   <script
@@ -56,12 +90,27 @@
 <body id="body-id">
   <div id="header"></div>
 
-  <div class="login-container" >
-    <h2>Login</h2>
+  <div class="login-container">
+    <!-- <h2>Login</h2> -->
     <form>
+
+      <div class="placeholder-title">E-mail</div>
       <input type="text" placeholder="Email" required>
+
+      <div class="placeholder-title">Mot de passe</div>
       <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
+
+      <a class="a-link" href="#">Mot de passe oublié ?</a>
+
+      <div class="botton-container">
+        <button class="signin-button" type="submit">Se connecter</button>
+      </div>
+
+      <div class="signup-title">Nouveau sur traineeng ?</div>
+      <div class="botton-container">
+        <button class="signup-button" type="submit">S'inscrire</button>
+      </div>
+
     </form>
   </div>
   <div id="footer"></div>
