@@ -2,80 +2,32 @@
 <html>
 <head>
   <style>
-    body {
+    .footer {
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .header {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-    }
-
-    .logo {
-      float: left;
-      margin-right: 20px;
-    }
-
-    .menu {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    .menu li {
-      display: inline-block;
-      margin-right: 10px;
-    }
-
-    .login-container {
-      max-width: 400px;
-      margin: 100px auto;
+      margin: 2;
       padding: 20px;
-      border: 1px solid #ccc;
+      margin-left: 10%;
+      margin-right: 10%;
+      background-color: #f6fdfb;
     }
 
-    .login-container input[type="text"],
-    .login-container input[type="password"] {
-      width: 100%;
-      padding: 10px;
+    .footer-link {
+      display: block;
       margin-bottom: 10px;
-      border: 1px solid #ccc;
+      color: black;
+      text-decoration: none;
+      font-weight: normal;
     }
 
-    .login-container button {
-      width: 100%;
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="../assets/logo.jpg" alt="Logo" height="60">
-    </div>
-    <nav>
-      <ul class="menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="login-container">
-    <h2>Login</h2>
-    <form>
-      <input type="text" placeholder="Email" required>
-      <input type="password" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
-  </div>
+  <footer class="footer">
+    <a class="footer-link" href="about.html">À propos</a>
+    <a class="footer-link" href="settings.html">Paramètres</a>
+    <a class="footer-link" href="contact.html">Contactez-nous</a>
+    <a class="footer-link" href="language.html">Langue</a>
+    <a class="footer-link" href="blog.html">Blog</a>
+  </footer>
 </body>
 </html>
