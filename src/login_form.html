@@ -46,7 +46,6 @@
       color: black;
       background-color: white;
       border: 1px solid #00958E;
-      color: black;
       padding: 10px;
     }
     .a-link{
@@ -73,26 +72,32 @@
     }
 
   </style>
-
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous">
-  </script>
-  <script>
-    $(function(){
-      $("#header").load("header.html");
-      $("#footer").load("footer.html");
-      $("#login-container").load("login_form.html");
-    });
-  </script>
 </head>
 
 <body id="body-id">
 
-  <div id="header"></div>
-  <div id="login-container"></div>
-  <div id="footer"></div>
+  <div class="login-container">
+    <!-- <h2>Login</h2> -->
+    <form>
 
+      <div class="placeholder-title">E-mail</div>
+      <input type="text" placeholder="Email" required>
+
+      <div class="placeholder-title">Mot de passe</div>
+      <input type="password" placeholder="Password" required>
+
+      <a class="a-link" href="#">Mot de passe oublié ?</a>
+
+      <div class="botton-container">
+        <button class="signin-button" type="submit">Se connecter</button>
+      </div>
+
+      <div class="signup-title">Nouveau sur traineeng ?</div>
+      <div class="botton-container">
+        <button class="signup-button" type="submit">S'inscrire</button>
+      </div>
+
+    </form>
+  </div>
 </body>
 </html>
