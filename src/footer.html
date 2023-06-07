@@ -2,14 +2,20 @@
 <html>
 <head>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+    body {
+      font-family: 'Cabin', Arial, sans-serif; /* Utilisation de la police Cabin */
+    }
+
     .footer {
-      font-family: Arial, sans-serif;
-      margin: 2;
+      margin: 2px;
       padding: 20px;
       margin-left: 10%;
       margin-right: 10%;
       background-color: #f6fdfb;
       border-top: 1px solid #00958E;
+      letter-spacing: 1px;
     }
 
     .footer-link {
@@ -20,15 +26,94 @@
       font-weight: normal;
     }
 
+    .container {
+      display: flex;
+      align-items: center;
+    }
+
+    .container.icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 5px; /* Ajustez cette valeur pour définir l'espace entre les icônes et le texte du copyright */
+    }
+
+    .same-size-image {
+      width: auto;
+      height: 1.1em;
+      vertical-align: middle;
+      margin-bottom: 0.5em;
+      margin-right: 5px; /* Ajustez cette valeur pour définir l'espace entre le texte et l'image */
+    }
+
+    .same-size-image-reseaux {
+      width: 1.5em; /* Ajustez cette valeur pour définir la taille des icônes */
+      height: 1.5em; /* Ajustez cette valeur pour définir la taille des icônes */
+      margin: 0 4px; /* Ajustez cette valeur pour définir l'espace entre les icônes */
+    }
+
+    .footer-link-langue {
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-link-langue a {
+      margin-right: 5px; /* Ajustez cette valeur pour définir l'espace entre les liens */
+    }
+
+    .footer-link-langue img {
+      vertical-align: middle;
+    }
+
+    .footer-copyright {
+      font-size: 12px;
+      text-align: center;
+      width: 100%; /* Pour centrer le texte sur toute la largeur */
+    }
+
+    .footer-link.footer-copyright {
+      margin-top: 0px; /* Ajustez cette valeur pour définir l'espace entre les icônes et le copyright */
+    }
+    
   </style>
 </head>
 <body>
   <footer class="footer">
-    <a class="footer-link" href="about.html">À propos</a>
-    <a class="footer-link" href="settings.html">Paramètres</a>
-    <a class="footer-link" href="contact.html">Contactez-nous</a>
-    <a class="footer-link" href="language.html">Langue</a>
-    <a class="footer-link" href="blog.html">Blog</a>
+    <div class="container footer-link-langue">
+      <a class="footer-link" href="language.html">Langue</a>
+      <img src="https://icones.pro/wp-content/uploads/2022/07/icone-planete-terre-gris.png" alt="Langue" class="same-size-image">
+    </div>
+    <div class="container">
+      <a class="footer-link" href="about.html">À propos</a>
+    </div>
+    <div class="container">
+      <a class="footer-link" href="settings.html">Paramètres</a>
+    </div>
+    <div class="container">
+      <a class="footer-link" href="contact.html">Contactez-nous</a>
+    </div>
+    <div class="container">
+      <a class="footer-link" href="blog.html">Blog</a>
+    </div>
+    <div class="container icons">
+
+        <a class="footer-link" href="https://instagram.com">
+          <img src="https://cdn.icon-icons.com/icons2/792/PNG/512/INSTAGRAM_icon-icons.com_65535.png" alt="Instagram" class="same-size-image-reseaux">
+        </a>
+        <a class="footer-link" href="https://facebook.com">
+          <img src="https://cdn.icon-icons.com/icons2/792/PNG/512/FB_icon-icons.com_65534.png" alt="Facebook" class="same-size-image-reseaux">
+        </a>
+        <a class="footer-link" href="https://twitter.com">
+          <img src="https://cdn.icon-icons.com/icons2/792/PNG/512/TWITTER_icon-icons.com_65536.png" alt="Twitter" class="same-size-image-reseaux">
+        </a>
+        <a class="footer-link" href="https://linkedin.com">
+          <img src="https://cdn.icon-icons.com/icons2/792/PNG/512/LINKEDIN_icon-icons.com_65538.png" alt="Linkedin" class="same-size-image-reseaux">
+        </a>
+
+    </div>
+    <div class="container">
+      <p class="footer-link footer-copyright">© 2023 Traineeng</p>
+    </div>
   </footer>
 </body>
 </html>
