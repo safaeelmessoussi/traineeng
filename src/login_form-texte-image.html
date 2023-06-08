@@ -15,10 +15,42 @@
     }
 
     .login-container {
-      max-width: 400px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 800px;
       margin: 50px auto;
       margin-bottom: 0px;
       padding: 20px;
+    }
+
+    .welcome-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 20px;
+    }
+
+    .welcome-text {
+      color: black;
+      font-size: 30px;
+      margin-left: 10px;
+      letter-spacing: 2px; /* Espacement entre les lettres */
+    }
+
+    .welcome-text span {
+      font-weight: bold;
+      color: #00958E;
+      font-family: 'Helvetica Bold', Arial, sans-serif;
+    }
+
+    .login-form {
+      margin-left: 20px;
+    }
+
+    .login-container img {
+      margin-top: 10px;
+      max-width: 200px;
     }
 
     .login-container input[type="text"],
@@ -47,7 +79,6 @@
       cursor: pointer;
       border-radius: 6px;
     }
-
     .signin-button {
       background-color: #00958E;
       color: #fff;
@@ -99,27 +130,35 @@
 <body id="body-id">
 
   <div class="login-container">
-    <!-- <h2>Login</h2> -->
-    <form>
-
-      <div class="placeholder-title">E-mail</div>
-      <input type="text" placeholder="E-mail" required>
-
-      <div class="placeholder-title">Mot de passe</div>
-      <input type="password" placeholder="Password" required>
-
-      <a class="a-link" href="#">Mot de passe oublié ?</a>
-
-      <div class="botton-container">
-        <button class="signin-button" type="submit">Se connecter</button>
+    <div class="welcome-container">
+      <div class="welcome-text">
+        Bienvenue sur votre<br>
+        plateforme <span class="special">N°1</span> pour<br>
+        les offres de <span class="special">stage</span>
       </div>
+      <img src="../assets/bienvenue.jpeg" alt="Welcome Image">
+    </div>
 
-      <div class="signup-title">Nouveau sur Traineeng ?</div>
-      <div class="botton-container">
-        <button class="signup-button" type="submit">S'inscrire</button>
-      </div>
+    <div class="login-form">
+      <form>
+        <div class="placeholder-title">E-mail</div>
+        <input type="text" placeholder="E-mail" required>
 
-    </form>
+        <div class="placeholder-title">Mot de passe</div>
+        <input type="password" placeholder="Password" required>
+
+        <a class="a-link" href="#">Mot de passe oublié ?</a>
+
+        <div class="botton-container">
+          <button class="signin-button" type="submit">Se connecter</button>
+        </div>
+
+        <div class="signup-title">Nouveau sur Traineeng ?</div>
+        <div class="botton-container">
+          <button class="signup-button" type="submit">S'inscrire</button>
+        </div>
+      </form>
+    </div>
   </div>
 </body>
 </html>
