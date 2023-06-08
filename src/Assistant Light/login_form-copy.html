@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #body-id {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6fdfb;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      margin-bottom: 0px;
+      padding: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      color: black;
+      background-color: #FAFCFC;
+    }
+
+    .login-container input[type="text"]::placeholder {
+      color: #999;
+      font-size: 90%;
+      
+    }
+
+    .login-container input[type="password"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .login-container button {
+      width: 50%;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .signin-button {
+      background-color: #00958E;
+      color: #fff;
+      border: none;
+      padding: 10px;
+    }
+    .signup-button {
+      color: black;
+      background-color: white;
+      border: 1px solid #00958E;
+      padding: 10px;
+    }
+    .a-link{
+      width: 100%;
+      color: black;
+      display: flex;
+      justify-content: left;
+      height: 4vh;
+    }
+
+    .botton-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh; /* Adjust the height of the container as needed */
+    }
+
+    .signup-title {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3vh; /* Adjust the height of the container as needed */
+    }
+
+  </style>
+</head>
+
+<body id="body-id">
+
+  <div class="login-container">
+    <!-- <h2>Login</h2> -->
+    <form>
+
+      <div class="placeholder-title">E-mail</div>
+      <input type="text" placeholder="E-mail" required>
+
+      <div class="placeholder-title">Mot de passe</div>
+      <input type="password" placeholder="Password" required>
+
+      <a class="a-link" href="#">Mot de passe oublié ?</a>
+
+      <div class="botton-container">
+        <button class="signin-button" type="submit">Se connecter</button>
+      </div>
+
+      <div class="signup-title">Nouveau sur Traineeng ?</div>
+      <div class="botton-container">
+        <button class="signup-button" type="submit">S'inscrire</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

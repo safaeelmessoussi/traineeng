@@ -33,8 +33,7 @@
 
     .welcome-text {
       color: black;
-      font-size: 24px;
-      font-family: 'Helvetica Bold', Arial, sans-serif;
+      font-size: 30px;
       margin-left: 10px;
       letter-spacing: 2px; /* Espacement entre les lettres */
     }
@@ -42,6 +41,7 @@
     .welcome-text span {
       font-weight: bold;
       color: #00958E;
+      font-family: 'Helvetica Bold', Arial, sans-serif;
     }
 
     .login-form {
@@ -85,12 +85,23 @@
       border: none;
       padding: 10px;
     }
+
+    .signin-button:hover {
+      background-color: #007977; /* Couleur plus foncée au survol */
+    }
+
     .signup-button {
       color: black;
       background-color: white;
       border: 1px solid #00958E;
       padding: 10px;
     }
+
+    .signup-button:hover {
+      background-color: #ececec; /* Couleur plus foncée au survol */
+      color: #000000; /* Couleur du texte au survol */
+    }
+
     .a-link{
       width: 100%;
       color: black;
@@ -122,8 +133,8 @@
     <div class="welcome-container">
       <div class="welcome-text">
         Bienvenue sur votre<br>
-        plateforme <span>N°1</span> pour<br>
-        les offres de <span>stage</span>
+        plateforme <span class="special">N°1</span> pour<br>
+        les offres de <span class="special">stage</span>
       </div>
       <img src="../assets/bienvenue.jpeg" alt="Welcome Image">
     </div>

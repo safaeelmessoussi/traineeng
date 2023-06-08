@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Cabin&display=swap');
+
+    .header {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 1;
+      background-color: #f6fdfb;
+      padding: 10px;
+      letter-spacing: 1px;
+    }
+
+    .box {
+      flex: 1;
+      margin: 10px;
+    }
+
+    .logo {
+      float: left;
+      margin-right: 60px;
+    }
+
+    .menu {
+      list-style-type: none;
+      margin: 35px;
+      padding: 0;
+    }
+
+    .menu li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .header-link {
+      text-decoration: none;
+      font-weight: normal;
+      color: #00958E;
+    }
+
+    input {
+      all: unset;
+      font: 16px system-ui;
+      color: #fff;
+      height: 100%;
+      width: 100%;
+      padding: 6px 10px;
+      border: #fff;
+    }
+
+    .search-container {
+      position: absolute;
+      top: 2%;
+      right: 5%;
+      margin: 25px;
+      border: 1px solid #00958E;
+      border-radius: 7px; /* Adjust the border radius value as desired */
+      width: 16%;
+    }
+
+    .search-field {
+      /*background-color: #f6fdfb;*/
+      /*border: 1px solid #f6fdfb;*/
+      display: flex;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .search-icon {
+      margin-right: 5px;
+      color: white;
+    }
+
+    .search-field input[type="text"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .search-field input[type="text"] {
+      background-color: #FAFCFC;
+      outline: none;
+      color: black; /* Set text color to black */
+    }
+
+    .search-field i {
+      margin-left: 5px;
+    }
+
+    .icon-background {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      padding: 10px;
+      border: 1px solid #00958E;
+      background-color: #00958E;
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo box">
+      <img src="../../assets/logo.jpg" alt="Logo" height="60">
+    </div>
+    <div class="box">
+      <nav>
+        <ul class="menu">
+          <li><a class="header-link" href="#">Fil d'actualité</a></li>
+          <li><a class="header-link" href="#">Mes entretiens</a></li>
+          <li><a class="header-link" href="#">Offres de stages</a></li>
+          <li><a class="header-link" href="#">Entreprises</a></li>
+          <li><a class="header-link" href="#">Candidats</a></li>
+          <li><a class="header-link" href="#">Profil</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="search-container box">
+      <div class="search-field">
+        <input type="text" placeholder="Stages, Entreprises, Candidats ...">
+        <div class="icon-background">
+          <i class="fas fa-search search-icon"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+</body>
+</html>
