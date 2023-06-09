@@ -1,0 +1,14 @@
+
+/* define variables for the primary style */
+$traineeng_light_green: #f6fdfb;
+$traineeng_dark_green: #00958E;
+$traineeng_dark_green_hover: #007977;
+
+$traineeng_primary_font-family: 'Assistant', Arial, sans-serif;
+
+* {
+  font-family: $traineeng_primary_font-family;
+  background-color: $traineeng_light_green;
+  margin: 0;
+  padding: 0;
+}
