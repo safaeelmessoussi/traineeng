@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@250&family=Cabin&display=swap');
+
+  #body-id {
+      background-color: #f6fdfb;
+      margin-left: 12%;
+      margin-right: 12%;
+      font-family: "Assistant";
+    }
+
+    
+  .topPage{
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .filters{
+    padding-left:1%;
+    padding-right:1%;
+    text-align: left;
+    flex: 3;
+  }
+  .suggestions{
+    flex: 1;
+  }
+
+  #bSuggestions{
+    background-color: #00958E;
+    color: #FFFFFF;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 50%;
+  }
+  #bFilter{
+    background-color: #FFFFFF;
+    color: #00958E;
+    border: 1px solid #00958E;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    width: 15%;
+    margin-right: 3px;
+    text-align: left;
+  }
+  #bFilter:hover, #bSuggestions:hover {
+      background-color: #007977;
+      color:#FFFFFF
+    }
+  #bFilter:focus{
+    background-color: #00958E;
+    color:#FFFFFF
+  }
+
+  .offer {
+    border: 1px solid rgb(237, 235, 235);
+    background-color: #FFFFFF;
+    padding-top:2%;
+    padding-bottom:2%;
+    padding-left:1%;
+    text-align: left;
+    margin:0.5%;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+  }
+  .imageLogo{
+    max-width: 80px;
+    max-height: 80px;
+    height:auto;
+    width: auto;
+  }
+
+  .iconFilterList{
+    max-width: 30px;
+    max-height: 30px;
+    height:auto;
+    width: auto;
+  }
+
+  .offerText{
+    padding-left: 7pt;
+    flex-basis:90%;
+  }
+  
+  </style>
+</head>
+
+<body id="body-id">
+
+<div class="topPage">
+  <div class="filters">
+    <button type="button" id="bFilter">Domaine</button>
+    <button type="button" id="bFilter">Pays</button>
+    <button type="button" id="bFilter">Ville</button>
+    <button type="button" id="bFilter">Rémuneration</button>
+    <button type="button" id="bFilter">Green Cert.</button>
+  </div>
+  <div class="suggestions" style="text-align: right;">
+    <button type="submit" id="bSuggestions">Offres suggérées pour votre profil</button>
+  </div>
+</div>
+
+<div class="allOffers">
+
+  <div class="offer">
+    <img class="imageLogo" src="../assets/UBS_Logo_SVG.svg.png" alt="Entreprise logo">
+    <div class="offerText">
+      <font size="3">UBS AG</font>
+      <br> <font size="5"><b>Risk Analyst</b>, Zurich </font>
+    </div>
+    <img class="iconFilterList" src="../assets/homeoffice.png" alt="Entreprise logo">
+    <img class="iconFilterList" src="../assets/salary.png" alt="Entreprise logo">
+    <img class="iconFilterList" src="../assets/greenCert.png" alt="Entreprise logo">
+
+    
+  </div>
+
+  <div class="offer">
+    <div class="offerLogo">
+      <img class="imageLogo" src="../assets/UBS_Logo_SVG.svg.png" alt="Entreprise logo">
+    </div>
+    <div class="offerText">
+      <font size="3">UBS AG</font>
+      <br> <font size="5"><b>Risk Analyst</b>, Zurich </font>
+    </div>
+
+  </div>
+
+</div>
+
+
+</body>
+</html>
