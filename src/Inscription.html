@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Cabin&display=swap');
+   
+
+    body {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6fdfb;
+    }
+
+    #body-id {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6fdfb;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 50px auto;
+      margin-bottom: 0px;
+      padding: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+    }
+
+    .login-container button {
+      width: 50%;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    .signin-button {
+      background-color: #00958E;
+      color: #fff;
+      border: none;
+      padding: 10px;
+    }
+    .signup-button {
+      color: black;
+      background-color: white;
+      border: 1px solid #00958E;
+      color: black;
+      padding: 10px;
+    }
+    .a-link{
+      width: 100%;
+      color: black;
+      display: flex;
+      justify-content: left;
+      height: 4vh;
+    }
+
+    .botton-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh; /* Adjust the height of the container as needed */
+    }
+
+    .signup-title {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 3vh; /* Adjust the height of the container as needed */
+    }
+
+  </style>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+  </script>
+  <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+      $("#inscription").load("inscription2.html");
+    });
+  </script>
+</head>
+
+<body id="body-id">
+
+  <div id="header"></div>
+  <div id="inscription"></div>
+  <div id="footer"></div>
+
+</body>
+</html>

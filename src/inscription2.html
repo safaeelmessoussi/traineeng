@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Cabin&display=swap');
+    body {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #body-id {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6fdfb;
+    }
+
+    .login-container {
+      max-width: 500px;
+      margin: 50px auto;
+      margin-bottom: 0px;
+      padding: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      color: black;
+      background-color: #FAFCFC;
+    }
+
+    .login-container input[type="text"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .login-container input[type="password"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .login-container button {
+      cursor: pointer;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+
+
+
+    .a-link{
+      width: 100%;
+      color: black;
+      display: flex;
+      justify-content: left;
+      height: 4vh;
+    }
+
+    .botton-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh; /* Ajuster la hauteur du conteneur si nécessaire */
+    }
+
+  
+
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .button-group button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border: 2px solid blue; /* Ajout de la bordure bleue */
+      height: 100px; /* Ajustez la hauteur des boutons selon vos préférences */
+}
+
+.button-group button img {
+  width: auto;
+  height: 100%; /* Ajustez la hauteur de l'image pour qu'elle remplisse entièrement le bouton */
+}
+
+    
+
+    .button-group button:first-child {
+      margin-right: 500px; /* Espace entre le premier bouton et le deuxième bouton */
+    }
+
+    .button-group button img {
+      width: 90px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body id="body-id">
+
+  <div class="login-container">
+    <div class="button-group">
+      <button><img src="../assets/chapeau.png" alt="Candidat"><span>Je m'inscris en tant que <b>Candidat</b></span></button>
+      <button><img src="../assets/costume.jpg" alt="Entreprise"><span>Je m'inscris en tant qu'<b>Entreprise</b></span></button>
+    </div>
+
+    <form>
+      <div class="placeholder-title">E-mail</div>
+      <input type="text" placeholder="E-mail" required>
+
+      <div class="placeholder-title">Mot de passe</div>
+      <input type="password" placeholder="Password" required>
+
+      <div class="password-policy">
+        En cliquant sur le bouton <b>'S'inscrire'</b>, vous confirmez avoir lu et accepté notre politique de confidentialité. Vous consentez également à ce que nous collections, utilisions et gérions vos informations personnelles conformément à cette politique. Veuillez prendre le temps de lire attentivement notre politique de confidentialité avant de procéder à votre inscription.
+      </div>
+
+      <div class="botton-container">
+        <button class="signin-button" type="submit">S'inscrire</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>
