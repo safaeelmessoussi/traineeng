@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+
+    body {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #body-id {
+      font-family: 'Assistant', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6fdfb;
+    }
+
+    .login-container {
+      max-width: 500px;
+      margin: 50px auto;
+      margin-bottom: 0px;
+      padding: 20px;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      border: 1px solid #ccc;
+      color: black;
+      background-color: #FAFCFC;
+    }
+
+    .login-container input[type="text"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .login-container input[type="password"]::placeholder {
+      color: #999;
+      font-size: 90%;
+    }
+
+    .login-container button {
+      cursor: pointer;
+      border-radius: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .signup-text {
+      font-size: 12px;
+      color: black;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 7vh; /* Ajuster la hauteur du conteneur si nécessaire */
+    }
+
+    .button-group {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .button-group button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      border: 2px solid #2b8bf8; /* Ajout de la bordure bleue */
+      height: 100px; /* Ajustez la hauteur des boutons selon vos préférences */
+      transition: background-color 0.3s ease-in-out; /* Transition pour la couleur de fond */
+      text-align: center;
+    }
+
+    .button-group button.active {
+      background-color: #2b8bf8; /* Couleur de fond verte pour le bouton actif */
+    }
+
+    .button-group button.active.blue {
+      background-color: #2b8bf8; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
+    }
+
+    .button-group button:hover {
+      background-color: #2b8bf8;
+    }
+
+    .button-group button .button-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .button-group button .button-content img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .button-group button .button-content span {
+      font-weight: bold;
+    }
+
+    .button-group button:first-child {
+      margin-right: 50px; /* Espace entre le premier bouton et le deuxième bouton */
+    }
+
+    .button-group .first-button {
+      border-color: #00958E;
+    }
+
+    .button-group .first-button.active {
+      background-color: #00958E; /* Couleur de fond verte pour le bouton actif */
+    }
+
+    .button-group .first-button.active.blue {
+      background-color: #2b8bf8; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
+    }
+
+    .button-group .first-button:hover {
+      background-color: #00958E;
+    }
+
+    .signup-button {
+            font-family: 'Assistant', Arial, sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00958E;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            transition: background-color 0.3s ease-in-out;
+            text-align: center;
+            flex-direction: column;
+        }
+
+    .signup-button:hover {
+        background-color: #007977;
+    }
+
+
+
+        .signup-button span {
+            font-family: 'Assistant', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px; /* Ajustez la valeur pour l'espace entre les lettres */
+            margin: auto;
+        }
+
+    .hidden {
+      display: none;
+      opacity: 0; /* Opacité initiale à 0 */
+    }
+
+
+    .fade-in {
+      opacity: 1; /* Opacité à 1 pour l'apparition */
+      animation: custom-fade-in 0.5s forwards;
+    }
+
+    .fade-out {
+        animation: custom-fade-out 0.3s ease-in-out forwards;
+    }
+
+    @keyframes custom-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+}
+
+@keyframes custom-fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.company {
+  color: #2b8bf8; /* Couleur du texte en bleu par défaut */
+}
+
+.button-group button.active .button-content .company,
+.button-group button:nth-child(2):not(.active):hover .button-content .company {
+  color: white !important; /* Couleur du texte en blanc lorsque le bouton est actif ou survolé */
+}
+
+.candidat {
+  color: #00958E; /* Couleur du texte en bleu par défaut */
+}
+
+.button-group button.active .button-content .candidat,
+.button-group button:first-child:not(.active):hover .button-content .candidat {
+  color: white !important; /* Couleur du texte en blanc lorsque le bouton est actif ou survolé */
+}
+
+
+
+
+
+
+  </style>
+</head>
+
+<body id="body-id">
+
+  <div class="login-container">
+    <div class="button-group">
+      <button class="first-button" onclick="toggleSignupForm('signup-form-1', this)">
+        <div class="button-content">
+          <img src="../assets/chapeau.png" alt="Candidat">
+          <span>Je m'inscris en tant que <b><span class="candidat">Candidat</span></b></span>
+        </div>
+      </button>
+      <button onclick="toggleSignupForm('signup-form-2', this)">
+        <div class="button-content">
+          <img src="../assets/costume.jpg" alt="Entreprise">
+          <span>Je m'inscris en tant qu'<b><span class="company">Entreprise</span></b></span>
+        </div>
+      </button>
+    </div>
+
+    <form id="signup-form-1" class="hidden">
+      <div class="placeholder-title">E-mail</div>
+      <input type="text" placeholder="E-mail" required>
+
+      <div class="placeholder-title">Mot de passe</div>
+      <input type="password" placeholder="Password" required>
+
+      <div class="signup-text">
+        En cliquant sur le bouton <b>'S'inscrire'</b>, vous confirmez avoir lu et accepté notre politique de confidentialité. Vous consentez également à ce que nous collections, utilisions et gérions vos informations personnelles conformément à cette politique. Veuillez prendre le temps de lire attentivement notre politique de confidentialité avant de procéder à votre inscription.
+      </div>
+
+      <div class="button-container">
+        <button class="signup-button" type="submit">S'inscrire</button>
+      </div>
+    </form>
+
+    <form id="signup-form-2" class="hidden">
+      <div class="placeholder-title">Nom de l'entreprise</div>
+      <input type="text" placeholder="Nom de l'entreprise" required>
+
+      <div class="placeholder-title">Adresse e-mail de l'entreprise</div>
+      <input type="text" placeholder="E-mail" required>
+
+      <div class="signup-text">
+        En cliquant sur le bouton <b>'S'inscrire'</b>, vous confirmez avoir lu et accepté notre politique de confidentialité. Vous consentez également à ce que nous collections, utilisions et gérions vos informations personnelles conformément à cette politique. Veuillez prendre le temps de lire attentivement notre politique de confidentialité avant de procéder à votre inscription.
+      </div>
+
+      <div class="button-container">
+        <button class="signup-button" type="submit">S'inscrire</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function toggleSignupForm(formId, button) {
+      var signupForm = document.getElementById(formId);
+      var isVisible = !signupForm.classList.contains("hidden");
+
+      if (isVisible) {
+        signupForm.classList.remove("fade-in");
+        signupForm.classList.add("fade-out");
+        setTimeout(function() {
+          signupForm.classList.add("hidden");
+          signupForm.classList.remove("fade-out");
+        }, 300);
+      } else {
+        signupForm.classList.remove("hidden");
+        signupForm.classList.remove("fade-in");
+        void signupForm.offsetWidth;
+        signupForm.classList.add("fade-in");
+      }
+
+      button.classList.toggle("active");
+      if (formId === "signup-form-1") {
+        var form2 = document.getElementById("signup-form-2");
+        var button2 = document.querySelector(".button-group button:nth-child(2)");
+        form2.classList.add("hidden");
+        form2.classList.remove("fade-in");
+        button2.classList.remove("active");
+        button2.classList.remove("blue");
+      } else if (formId === "signup-form-2") {
+        var form1 = document.getElementById("signup-form-1");
+        var button1 = document.querySelector(".button-group button:first-child");
+        form1.classList.add("hidden");
+        form1.classList.remove("fade-in");
+        button1.classList.remove("active");
+        button1.classList.remove("blue");
+      }
+
+      // Mettre à jour la couleur du texte "Candidat" lorsque le bouton est activé ou désactivé
+        var candidatText = document.querySelector(".button-group button:first-child .candidat");
+        var entrepriseText = document.querySelector(".button-group button:last-child .company");
+        if (button.classList.contains("active")) {
+            candidatText.style.color = "#00958E";
+            entrepriseText.style.color = "#2b8bf8";
+        } else {
+            candidatText.style.color = "#00958E";
+            entrepriseText.style.color = "#2b8bf8";
+}
+    }
+  </script>
+</body>
+</html>
