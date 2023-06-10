@@ -12,10 +12,14 @@
       font-family: "Assistant";
     }
 
+button{
+  font-family: "Assistant";
+  font-weight: 900;
+}
     
   .topPage{
     display: flex;
-    margin-top: 5%;
+    margin-top: 30px;
     align-items: center;
     justify-content: center;
   }
@@ -52,7 +56,21 @@
     margin-right: 3px;
     text-align: left;
   }
-  #bFilter:hover, #bSuggestions:hover {
+  #bApply{
+    background-color: #00958E;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    margin-right: 70px;
+    margin-left: 70px;
+    text-align: left;
+    flex-basis:15%;
+    font-size: 14px;
+  }
+  #bFilter:hover, #bSuggestions:hover, #bApply:hover {
       background-color: #007977;
       color:#FFFFFF
     }
@@ -66,17 +84,16 @@
     background-color: #FFFFFF;
     padding-top:2%;
     padding-bottom:2%;
-    padding-left:1%;
+    padding-left:7px;
     text-align: left;
     margin:0.5%;
     display: flex;
     height: 40px;
     align-items: center;
-    justify-content: center;
   }
   .imageLogo{
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 70px;
+    max-height: 70px;
     height:auto;
     width: auto;
   }
@@ -89,22 +106,65 @@
   }
 
   .offerText{
-    padding-left: 7pt;
-    flex-basis:90%;
+    margin-left: 7px;
+    flex-basis:40%;
   }
+
+  #filterIconOffer{
+    margin-left: 5px;
+    flex-basis:5%;
+  }
+
+  #bFavorite {
+    display: none;
+  }
+
+  #bFavorite:checked + label .initial-icon {
+    display: none;
+  }
+
+  #bFavorite + label .clicked-icon {
+    display: none;
+  }
+
+  #bFavorite:checked + label .clicked-icon {
+    display: inline-block;
+  }
+
+  ion-icon {
+  font-size: 22px;
+}
   
   </style>
 </head>
+<!-- load icons module -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+
 
 <body id="body-id">
 
 <div class="topPage">
   <div class="filters">
-    <button type="button" id="bFilter">Domaine</button>
-    <button type="button" id="bFilter">Pays</button>
-    <button type="button" id="bFilter">Ville</button>
-    <button type="button" id="bFilter">Rémuneration</button>
-    <button type="button" id="bFilter">Green Cert.</button>
+    <button type="button" id="bFilter">
+      <ion-icon name="briefcase-outline"></ion-icon>
+      Domaine
+    </button>
+    <button type="button" id="bFilter">
+      <ion-icon name="earth-outline"></ion-icon>
+      Pays
+    </button>
+    <button type="button" id="bFilter">
+      <ion-icon name="business-outline"></ion-icon>
+      Ville
+    </button>
+    <button type="button" id="bFilter">
+      <ion-icon name="cash-outline"></ion-icon>
+      Rémuneration
+    </button>
+    <button type="button" id="bFilter">
+      <ion-icon name="leaf-outline"></ion-icon>
+      Green Cert.
+    </button>
   </div>
   <div class="suggestions" style="text-align: right;">
     <button type="submit" id="bSuggestions">Offres suggérées pour votre profil</button>
@@ -113,29 +173,50 @@
 
 <div class="allOffers">
 
+  <!-- offer start -->
   <div class="offer">
     <img class="imageLogo" src="../assets/UBS_Logo_SVG.svg.png" alt="Entreprise logo">
     <div class="offerText">
       <font size="3">UBS AG</font>
-      <br> <font size="5"><b>Risk Analyst</b>, Zurich </font>
+      <br> <font size="4.5"><b>Risk Analyst</b>, Zurich </font>
     </div>
-    <img class="iconFilterList" src="../assets/homeoffice.png" alt="Entreprise logo">
-    <img class="iconFilterList" src="../assets/salary.png" alt="Entreprise logo">
-    <img class="iconFilterList" src="../assets/greenCert.png" alt="Entreprise logo">
-
+    <ion-icon id="filterIconOffer" name="cash-outline" style="color: rgb(128, 128, 128); font-size:30px;"></ion-icon>
+    <ion-icon id="filterIconOffer" name="leaf-outline" style="color: green; font-size:30px;"></ion-icon>
+    <button type="button" id="bApply" style="text-align:right;">
+      Postuler
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+    </button>
     
+    <input type="checkbox" id="bFavorite" style="text-align:right;">
+      <label for="bFavorite">
+        <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
+        <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
+      </label> 
   </div>
+  <!-- offer end -->
 
-  <div class="offer">
-    <div class="offerLogo">
-      <img class="imageLogo" src="../assets/UBS_Logo_SVG.svg.png" alt="Entreprise logo">
-    </div>
-    <div class="offerText">
-      <font size="3">UBS AG</font>
-      <br> <font size="5"><b>Risk Analyst</b>, Zurich </font>
-    </div>
 
-  </div>
+    <!-- offer start -->
+    <div class="offer">
+      <img class="imageLogo" src="../assets/fleurDePains.png" alt="Entreprise logo">
+      <div class="offerText">
+        <font size="3">Fleur de Pains</font>
+        <br> <font size="4.5"><b>Vendeurs-ses/Gestionnaires du commerce de détail</b>, Lausanne </font>
+      </div>
+      <ion-icon id="filterIconOffer" name="cash-outline" style="color: rgb(128, 128, 128); font-size:30px;"></ion-icon>
+      <ion-icon id="filterIconOffer" name="leaf-outline" style="color: green; font-size:30px;"></ion-icon>
+      <button type="button" id="bApply" style="text-align:right;">
+        Postuler
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+      </button>
+      
+      <input type="checkbox" id="bFavorite" style="text-align:right;">
+        <label for="bFavorite">
+          <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
+          <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
+        </label> 
+    </div>
+    <!-- offer end -->
 
 </div>
 
