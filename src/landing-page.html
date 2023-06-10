@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="index.css">
+  <style>
+  </style>
+
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+  </script>
+  <script>
+    $(function(){
+      $("#header").load("header.html");
+      $("#footer").load("footer.html");
+      $("#login-form-container").load("login-form.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <div class="login-form-img-container">
+    <div class="welcome-container login_form_img_boxes">
+      <div class="welcome-left-div">
+        <div class="welcome-text">
+          Bienvenue sur votre<br>
+          plateforme <span class="special">N°1</span> pour<br>
+          les offres de <span class="special">stage</span>
+        </div>
+        <img id="welcome-img"  src="../assets/bienvenue.jpeg" alt="Welcome Image">
+      </div>
+    </div>
+    <div id="login-form-container" class="login-container login_form_img_boxes">
+
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+</body>
+</html>
