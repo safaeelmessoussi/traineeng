@@ -12,10 +12,10 @@
       font-family: "Assistant";
     }
 
-button{
-  font-family: "Assistant";
-  font-weight: 900;
-}
+  button{
+    font-family: "Assistant";
+    font-weight: 600;
+  }
     
   .topPage{
     display: flex;
@@ -25,13 +25,13 @@ button{
   }
 
   .filters{
-    padding-left:1%;
-    padding-right:1%;
     text-align: left;
     flex: 3;
+    align-items: center;
   }
   .suggestions{
     flex: 1;
+    text-align: right;
   }
 
   #bSuggestions{
@@ -55,12 +55,15 @@ button{
     width: 15%;
     margin-right: 3px;
     text-align: left;
+    position: relative;
   }
+
   #bApply{
     background-color: #00958E;
     color: #FFFFFF;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 15px;
     cursor: pointer;
     border-radius: 25px;
     border: none;
@@ -69,6 +72,7 @@ button{
     text-align: left;
     flex-basis:15%;
     font-size: 14px;
+    position: relative;
   }
   #bFilter:hover, #bSuggestions:hover, #bApply:hover {
       background-color: #007977;
@@ -76,7 +80,26 @@ button{
     }
   #bFilter:focus{
     background-color: #00958E;
-    color:#FFFFFF
+    color:#FFFFFF;
+  }
+
+  #bFilter ion-icon {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+ #bApply ion-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .filterText {
+    display: inline-block;
+    margin-left: 25px;
   }
 
   .offer {
@@ -85,11 +108,14 @@ button{
     padding-top:2%;
     padding-bottom:2%;
     padding-left:7px;
+    padding-right:7px;
     text-align: left;
-    margin:0.5%;
+    margin-top:0.5%;
+    margin-bottom:0.5%;
     display: flex;
     height: 40px;
     align-items: center;
+    position:relative;
   }
   .imageLogo{
     max-width: 70px;
@@ -115,26 +141,32 @@ button{
     flex-basis:5%;
   }
 
-  #bFavorite {
+  .bFavorite{
+    margin-left: auto;
+  }
+
+  #bBookmark {
     display: none;
   }
 
-  #bFavorite:checked + label .initial-icon {
+  #bBookmark:checked + label .initial-icon {
     display: none;
   }
 
-  #bFavorite + label .clicked-icon {
+  #bBookmark + label .clicked-icon {
     display: none;
   }
 
-  #bFavorite:checked + label .clicked-icon {
+  #bBookmark:checked + label .clicked-icon {
     display: inline-block;
   }
 
   ion-icon {
   font-size: 22px;
+  position: relative;
 }
-  
+
+
   </style>
 </head>
 <!-- load icons module -->
@@ -147,26 +179,26 @@ button{
   <div class="filters">
     <button type="button" id="bFilter">
       <ion-icon name="briefcase-outline"></ion-icon>
-      Domaine
+      <span class="filterText">Domaine</span>
     </button>
     <button type="button" id="bFilter">
       <ion-icon name="earth-outline"></ion-icon>
-      Pays
+      <span class="filterText">Pays</span>
     </button>
     <button type="button" id="bFilter">
       <ion-icon name="business-outline"></ion-icon>
-      Ville
+      <span class="filterText">Ville</span>
     </button>
     <button type="button" id="bFilter">
       <ion-icon name="cash-outline"></ion-icon>
-      Rémuneration
+      <span class="filterText">Rémuneration</span>
     </button>
     <button type="button" id="bFilter">
       <ion-icon name="leaf-outline"></ion-icon>
-      Green Cert.
+      <span class="filterText">Green Cert.</span>
     </button>
   </div>
-  <div class="suggestions" style="text-align: right;">
+  <div class="suggestions">
     <button type="submit" id="bSuggestions">Offres suggérées pour votre profil</button>
   </div>
 </div>
@@ -177,21 +209,24 @@ button{
   <div class="offer">
     <img class="imageLogo" src="../assets/UBS_Logo_SVG.svg.png" alt="Entreprise logo">
     <div class="offerText">
-      <font size="3">UBS AG</font>
+      <font size="">UBS AG</font>
       <br> <font size="4.5"><b>Risk Analyst</b>, Zurich </font>
     </div>
     <ion-icon id="filterIconOffer" name="cash-outline" style="color: rgb(128, 128, 128); font-size:30px;"></ion-icon>
     <ion-icon id="filterIconOffer" name="leaf-outline" style="color: green; font-size:30px;"></ion-icon>
-    <button type="button" id="bApply" style="text-align:right;">
+    <button type="button" id="bApply" style="text-align:left;">
       Postuler
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <ion-icon name="checkmark-circle-outline" style="position: absolute; right: 5px;"></ion-icon>
     </button>
     
-    <input type="checkbox" id="bFavorite" style="text-align:right;">
-      <label for="bFavorite">
+    <div class="bFavorite">
+      <input type="checkbox" id="bBookmark" style="text-align:right;">
+      <label for="bBookmark">
         <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
         <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
       </label> 
+    </div>
+
   </div>
   <!-- offer end -->
 
@@ -204,17 +239,20 @@ button{
         <br> <font size="4.5"><b>Vendeurs-ses/Gestionnaires du commerce de détail</b>, Lausanne </font>
       </div>
       <ion-icon id="filterIconOffer" name="cash-outline" style="color: rgb(128, 128, 128); font-size:30px;"></ion-icon>
-      <ion-icon id="filterIconOffer" name="leaf-outline" style="color: green; font-size:30px;"></ion-icon>
-      <button type="button" id="bApply" style="text-align:right;">
+      <ion-icon id="filterIconOffer" name="" style="color: green; font-size:30px;"></ion-icon>
+      <button type="button" id="bApply" style="text-align:left;">
         Postuler
-        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        <ion-icon name="checkmark-circle-outline" style="position: absolute; right: 5px;"></ion-icon>
       </button>
       
-      <input type="checkbox" id="bFavorite" style="text-align:right;">
-        <label for="bFavorite">
-          <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
-          <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
-        </label> 
+    <div class="bFavorite">
+      <input type="checkbox" id="bBookmark" style="text-align:right;">
+      <label for="bBookmark">
+        <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
+        <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
+      </label> 
+    </div>
+
     </div>
     <!-- offer end -->
 
