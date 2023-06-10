@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-  </style>
+  <style></style>
+  <script>
+    var language;
+    function getLanguage() {
+      (localStorage.getItem('language') == null) ? setLanguage('fr') : false;
+      $.ajax({
+      url:  '/language/' +  localStorage.getItem('language') + '.json',
+      dataType: 'json', async: false, dataType: 'json',
+      success: function (lang) { language = lang } });
+    }
+
+    function setLanguage(lang) {
+      localStorage.setItem('language', lang);
+    }
+    </script>
 </head>
 <body>
   <footer class="footer">
+
     <div class="container footer-link-langue">
-      <a class="footer-link" href="language.html">Langue</a>
-      <a href="language.html"><img src="../assets/planete.png" alt="Langue" class="same-size-image"></a>
+      <div class="dropdown">
+        <button onclick="showLanguageDropdown()" class="dropbtn footer-link">
+          Langue
+          <img src="../assets/planete.png" alt="Langue" class="same-size-image">
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#">Français</a>
+          <a href="#">Anglais</a>
+        </div>
+      </div>
     </div>
     <div class="container">
       <a class="footer-link" href="about.html">À propos</a>
