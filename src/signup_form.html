@@ -74,22 +74,22 @@
       background-color: transparent;
       border: none;
       cursor: pointer;
-      border: 2px solid #2b8bf8; /* Ajout de la bordure bleue */
+      border: 2px solid #1C7194; /* Ajout de la bordure bleue */
       height: 100px; /* Ajustez la hauteur des boutons selon vos préférences */
       transition: background-color 0.3s ease-in-out; /* Transition pour la couleur de fond */
       text-align: center;
     }
 
     .button-group button.active {
-      background-color: #2b8bf8; /* Couleur de fond verte pour le bouton actif */
+      background-color: #1C7194; /* Couleur de fond verte pour le bouton actif */
     }
 
     .button-group button.active.blue {
-      background-color: #2b8bf8; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
+      background-color: #1C7194; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
     }
 
     .button-group button:hover {
-      background-color: #2b8bf8;
+      background-color: #1C7194;
     }
 
     .button-group button .button-content {
@@ -120,7 +120,7 @@
     }
 
     .button-group .first-button.active.blue {
-      background-color: #2b8bf8; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
+      background-color: #1C7194; /* Couleur de fond bleue pour le bouton actif avec la classe "blue" */
     }
 
     .button-group .first-button:hover {
@@ -195,7 +195,7 @@
 }
 
 .company {
-  color: #2b8bf8; /* Couleur du texte en bleu par défaut */
+  color: #1C7194; /* Couleur du texte en bleu par défaut */
 }
 
 .button-group button.active .button-content .company,
@@ -232,7 +232,7 @@
       </button>
       <button onclick="toggleSignupForm('signup-form-2', this)">
         <div class="button-content">
-          <img src="../assets/costume.jpg" alt="Entreprise">
+          <img src="../assets/costume.png" alt="Entreprise">
           <span>Je m'inscris en tant qu'<b><span class="company">Entreprise</span></b></span>
         </div>
       </button>
@@ -312,10 +312,10 @@
         var entrepriseText = document.querySelector(".button-group button:last-child .company");
         if (button.classList.contains("active")) {
             candidatText.style.color = "#00958E";
-            entrepriseText.style.color = "#2b8bf8";
+            entrepriseText.style.color = "#1C7194";
         } else {
             candidatText.style.color = "#00958E";
-            entrepriseText.style.color = "#2b8bf8";
+            entrepriseText.style.color = "#1C7194";
 }
     }
   </script>
