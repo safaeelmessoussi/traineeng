@@ -145,27 +145,35 @@
     margin-left: auto;
   }
 
-  #bBookmark {
-    display: none;
-  }
+  .bFavorite input[type="checkbox"] {
+  display: none;
+}
 
-  #bBookmark:checked + label .initial-icon {
-    display: none;
-  }
-
-  #bBookmark + label .clicked-icon {
-    display: none;
-  }
-
-  #bBookmark:checked + label .clicked-icon {
-    display: inline-block;
-  }
 
   ion-icon {
   font-size: 22px;
   position: relative;
 }
 
+.initial-icon {
+  display: inline-block;
+}
+
+.clicked-icon {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label .initial-icon {
+  display: none;
+}
+
+input[type="checkbox"]:checked + label .clicked-icon {
+  display: inline-block;
+}
+
+.checkbox-label:hover {
+  cursor: pointer;
+}
 
   </style>
 </head>
@@ -220,8 +228,8 @@
     </button>
     
     <div class="bFavorite">
-      <input type="checkbox" id="bBookmark" style="text-align:right;">
-      <label for="bBookmark">
+      <input type="checkbox" class="bBookmark" style="text-align:right;">
+      <label for="bBookmark" class="checkbox-label">
         <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
         <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
       </label> 
@@ -246,8 +254,8 @@
       </button>
       
     <div class="bFavorite">
-      <input type="checkbox" id="bBookmark" style="text-align:right;">
-      <label for="bBookmark">
+      <input type="checkbox" class="bBookmark" style="text-align:right;">
+      <label for="bBookmark" class="checkbox-label">
         <span class="initial-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark-outline"></ion-icon></span>
         <span class="clicked-icon"><ion-icon style="color: rgba(219, 190, 96, 0.8)" name="bookmark"></ion-icon></span>
       </label> 
@@ -258,6 +266,17 @@
 
 </div>
 
+<script>
+  // Récupérer toutes les checkboxes avec la classe "bBookmark"
+  const checkboxes = document.querySelectorAll('.bBookmark');
+
+  // Parcourir les checkboxes et générer un identifiant unique pour chacune
+  checkboxes.forEach((checkbox, index) => {
+    const uniqueId = `bBookmark${index + 1}`;
+    checkbox.id = uniqueId;
+    checkbox.nextElementSibling.setAttribute('for', uniqueId);
+  });
+</script>
 
 </body>
 </html>
