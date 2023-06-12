@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="index.css">
   <style>
   </style>
 
@@ -11,9 +12,9 @@
   </script>
   <script>
     $(function(){
-      $("#header").load("not-logged-in-header.html");
+      $("#header").load("logged-in-header.html");
       $("#footer").load("footer.html");
-      $("#login-container").load("login-form.html");
+      $("#login-form-container").load("login-form.html");
     });
   </script>
 </head>
@@ -21,7 +22,13 @@
 <body>
 
   <div id="header"></div>
-  <div id="login-container"></div>
+
+  <div class="cv-container">
+    <div id="login-form-container" class="login-container login_form_img_boxes">
+
+    </div>
+  </div>
+
   <div id="footer"></div>
 
 </body>
